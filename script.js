@@ -12,4 +12,4 @@ const currentDayOfTheWeek = new Date().getDay();
 const githubURL = window.localStorage.getItem("githubURL");
 
 
-today.innerHTML = days[currentDayOfTheWeek]
+today.innerHTML = days[currentDayOfTheWeek];
