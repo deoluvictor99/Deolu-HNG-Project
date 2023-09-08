@@ -4,13 +4,12 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"
 
 const time = document.getElementById('currentUTCTime')
 
-time.innerHTML = new Date().getMilliseconds()
+time.innerHTML = `${new Date().getTime() * 1000}ms`
 
 
 
 
 const currentDayOfTheWeek = new Date().getDay();
-// const currentUTCTime = new Date();
 
 
 const slackUserName = window.localStorage.getItem("slackUserName");
