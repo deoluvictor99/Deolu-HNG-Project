@@ -1,15 +1,18 @@
-const today = document.getElementById('currentDayOfTheWeek')
+const today = document.querySelector("[data-testid='currentDayOfTheWeek']");
 
-const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"]
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "friday", "Saturday"]
 
-const time = document.getElementById('currentUTCTime')
+const time = document.querySelector("[data-testid='currentUTCTime']");
 
 
 // current utc time in ms
-time.innerHTML = `${new Date().getTime() * 1000}ms`
+function updateTime() {
+    const currentTime = new Date().getTime();
+    time.innerHTML = `${currentTime}ms`;
+}
+
+setInterval(updateTime, 1000);
 
 const currentDayOfTheWeek = new Date().getDay();
-const githubURL = window.localStorage.getItem("githubURL");
-
 
 today.innerHTML = days[currentDayOfTheWeek]

@@ -8,20 +8,12 @@
 
 body{
     background-color: var(--periwinkle);
-    /* background: #4D5646; */
-    /* background: #fff; */
     height: 96vh;
     display: flex;
     align-items: center;
     font-family: krub;
 }
 
-h1{
-    border-bottom: 1px solid rgb(235, 225, 225);
-    /* width: 70%; */
-    margin: auto;
-    padding: 1rem 0 0.8rem;
-}
 
 .card{
     margin: 0 auto;
@@ -32,7 +24,7 @@ h1{
     background-color: #fdf5f5;
 }
 
-.image{
+div[data-testid="slackDisplayImage"]{
     max-width: 100%;  
     overflow: hidden;
     border-radius: 0.8rem;
@@ -53,11 +45,11 @@ img{
 }
 
 .content{
-    /* text-align: left; */
     font-weight: 500;
 }
 
-.githubURL{
+
+a[data-testid="githubURL"]{
     background-color: var(--cornflower-blue);
     border-radius: 1.3rem;
     padding: 0.8rem 0;
@@ -68,15 +60,12 @@ img{
     justify-content: center;
     align-items: center;
     gap: 1rem;
-}
-
-.githubURL a{
     text-decoration: none;
     color: white;
     font-weight: 700;
 }
 
-.githubURL:hover{
+a[data-testid="githubURL"]:hover{
     transform: scale(1.02);
     transition: all 0.4s;
 }
@@ -84,10 +73,3 @@ img{
 .text{
     font-weight: 700;
 }
-
-.github{
-    width: 1rem;
-    color: white;
-}
-
-
